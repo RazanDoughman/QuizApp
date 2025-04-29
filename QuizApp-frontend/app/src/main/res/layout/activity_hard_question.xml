@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="35dp"
+    android:background="@color/grey"
+    tools:context=".Activity.HardQuestionActivity">
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/questionTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Question Text"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"/>
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/questionTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/questionList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

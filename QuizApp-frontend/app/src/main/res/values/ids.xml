@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="frame" type="id" />
+    <item name="headerLayout" type="id" />
+    <item name="titleText" type="id" />
+    <item name="thumbnailContainer" type="id" />
+    <item name="thumbnailImageView" type="id" />
+    <item name="thumbnailHint" type="id" />
+    <item name="quizTitleInput" type="id" />
+    <item name="quizDescriptionInput" type="id" />
+    <item name="quizCategorySpinner" type="id" />
+    <item name="numberOfQuestionsInput" type="id" />
+    <item name="quizDurationInput" type="id" />
+    <item name="saveQuizButton" type="id" />
+</resources>

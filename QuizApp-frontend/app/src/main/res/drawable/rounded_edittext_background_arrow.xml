@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+    <solid android:color="@android:color/white" /> <!-- Background color -->
+    <corners android:radius="16dp" /> <!-- Rounded corners -->
+    <stroke android:width="2dp" android:color="#D3D3D3" />
+        </shape>
+
+
+    </item>
+
+    <!-- Arrow image on the right -->
+    <item android:drawable="@drawable/arrow2"
+        android:gravity="end|center_vertical"
+        android:top="0dp"
+        android:bottom="0dp"
+        android:right="16dp" />
+</layer-list>

@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/white"
+    android:layout_marginBottom="16dp">
+
+    <!-- Question Text -->
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Options List -->
+    <TextView
+        android:id="@+id/optionsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Correct Answer -->
+    <TextView
+        android:id="@+id/correctAnswerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correct Answer"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:paddingTop="8dp"
+        android:textColor="@color/green" />
+</LinearLayout>

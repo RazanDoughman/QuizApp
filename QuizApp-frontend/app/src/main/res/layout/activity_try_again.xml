@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Text centered at the top -->
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❌ Oops, try again! ❌"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="192dp" />
+
+    <!-- LinearLayout for the background image, centered -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/wronganswer"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/backBtn"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Button centered below the TextView and LinearLayout -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backBtn"
+        style="@android:style/Widget.Button"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:background="@drawable/orange_background"
+        android:text="Back To Home"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

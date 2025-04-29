@@ -1,0 +1,219 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Quiz"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginLeft="18dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back To Home"
+        android:backgroundTint="@color/darker_orange"
+        android:layout_marginLeft="18dp"
+        app:layout_constraintTop_toBottomOf="@id/pageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- CardView for Question -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/questionCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/setQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Your Questions"
+                android:textColor="@color/navy_blue"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/questionNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question No. 1"
+                android:textColor="@color/navy_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:indeterminateDuration="10"
+                android:max="10"
+                android:progress="1"
+                app:indicatorColor="@color/orange"
+                app:trackCornerRadius="50dp"
+                app:trackThickness="14dp" />
+
+            <TextView
+                android:id="@+id/questionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question Name"
+                android:textColor="@color/navy_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/questionInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your question here"
+                android:background="@drawable/rounded_edittext_background1"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/questionsAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question Answer"
+                android:textColor="@color/navy_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option 1"
+                android:background="@drawable/rounded_edittext_background1"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option 2"
+                android:background="@drawable/rounded_edittext_background1"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option 3"
+                android:background="@drawable/rounded_edittext_background1"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Option 4"
+                android:background="@drawable/rounded_edittext_background1"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:id="@+id/questionCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct Answer"
+                android:textColor="@color/navy_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/correctAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correct Answer"
+                android:background="@drawable/rounded_edittext_background2"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Navigation Arrows -->
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/questionCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/left_arrow2"
+            android:contentDescription="Previous Question"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/forwardArrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/right_arrow2"
+            android:contentDescription="Next Question" />
+
+        <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="@color/darker_orange"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/navigationLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

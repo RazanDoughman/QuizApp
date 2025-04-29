@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue"
+    tools:context=".Activity.CreateQuizActivity">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollableContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fixedBottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header: Back Arrow and Title -->
+            <LinearLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Back Arrow -->
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/back2"
+                    android:contentDescription="Back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Create Quiz"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- New CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <!-- Content Inside New Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Quiz Thumbnail -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Set Quiz Thumbnail"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/navy_blue"
+                        android:layout_marginBottom="16dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/imageContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/rounded_edittext_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/thumbnailImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/placeholderIcon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/image"
+                        app:tint="@color/purple" />
+
+                    <TextView
+                        android:id="@+id/selectImageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click to upload"
+                        android:textColor="@color/navy_blue"
+                        android:textSize="24sp"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/uploadHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="svg, jpg, png, etc"
+                        android:textColor="@color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/createQuizCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <!-- Content Inside Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Quiz Name -->
+                    <TextView
+                        android:id="@+id/quizNameLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Quiz Name"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/quizNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edittext_background1"
+                        android:padding="12dp"
+                        android:inputType="text"
+                        android:layout_marginBottom="16dp"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:hint="Enter Quiz Name" />
+
+                    <!-- Quiz Description -->
+                    <TextView
+                        android:id="@+id/quizDescriptionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz Description"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/quizDescriptionInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Enter Quiz Description"
+                        android:background="@drawable/rounded_edittext_background1"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:padding="12dp"
+                        android:inputType="textMultiLine"
+                        android:lines="3" />
+
+                    <!-- Quiz Category -->
+                    <TextView
+                        android:id="@+id/quizCategoryLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz Category"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+
+                    <!-- Number of Questions -->
+                    <Spinner
+                        android:id="@+id/quizCategorySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rounded_edittext_background1"
+                        android:padding="12dp"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:spinnerMode="dropdown"
+                        android:clickable="false"
+                        android:focusable="false"/>
+
+                        <!-- Arrow -->
+                        <ImageView
+                            android:id="@+id/dropdownArrow"
+                            android:layout_width="16dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/arrow2"
+                            android:contentDescription="Dropdown Arrow"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/numberOfQuestionsLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Number of Questions"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/numberOfQuestionsInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Enter Number of Questions"
+                        android:background="@drawable/rounded_edittext_background1"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:padding="12dp"
+                        android:inputType="number" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fixedBottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Fixed Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/fixedBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Next"
+            android:backgroundTint="@color/purple"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
